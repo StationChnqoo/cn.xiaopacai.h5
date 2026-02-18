@@ -114,14 +114,15 @@ Differentiated evaluation based on living costs and work pressure in different c
 
 ## 📈 Scoring Standard
 
-| Score Range | Rating | Emoji | Status Color | Description | Suggested Action |
-|-------------|--------|--------|--------------|-------------|------------------|
-| < 1.0 | Terrible | 😵 | 🔴 | Extremely low value | Resign immediately, find new opportunities |
-| 1.0-1.5 | Poor | 😐 | 🟠 | Mismatched effort and return | Job hunt while employed |
-| 1.5-2.5 | Average | 🙂 | 🟡 | Acceptable, standard level | Stable employment, watch for opportunities |
-| 2.5-5.0 | Good | 😊 | 🟢 | Good cost-performance | Cherish opportunity, long-term development |
-| 5.0-10.0 | Excellent | 😍 | 🟢 | Extremely high value | Don't give up easily |
-| > 10.0 | Exceptional | 🚀 | 💎 | Dream job | Peak of life, defend your position |
+| Score Range | Rating | Description | Suggested Action |
+|-------------|--------|-------------|------------------|
+| 0.0-0.3 | 😵 Terrible | Extremely low value | Resign immediately, find new opportunities |
+| 0.3-0.6 | 🥀 Poor | Mismatched effort and return | Job hunt while employed |
+| 0.6-1.0 | 😐 Below Average | Barely acceptable | Stable employment, watch for opportunities |
+| 1.0-1.6 | 🙂 Average | Standard level, acceptable | Continue working, focus on development |
+| 1.6-2.3 | 😎 Good | Good cost-performance | Cherish opportunity, long-term development |
+| 2.3-3.1 | 👑 Excellent | Extremely high value | Don't give up easily |
+| 3.1-5.0 | 🚀 Exceptional | Dream job | Peak of life, defend your position |
 
 ---
 
@@ -186,15 +187,15 @@ Same salary comparison:
 
 Same 144k annual package (12k monthly):
 
-| City | Score | Living Status | Emoji |
-|------|--------|---------------|--------|
-| Tier 1 City | 1.00 points | Struggling, barely making ends meet | 😵 |
-| New First Tier | 1.25 points | High pressure, can't save | 😐 |
-| Second Tier | 1.42 points | Okay, some pressure | 🙂 |
-| Third Tier | 1.67 points | Good, middle class lifestyle | 😊 |
-| Fourth Tier | 2.00 points | Excellent, local middle class | 😍 |
-| County | 2.33 points | Extremely good, worry-free living | 🚀 |
-| Township | 2.66 points | Local tycoon, elite status | 💎 |
+| City | Score | Living Status |
+|------|--------|---------------|
+| Tier 1 City | 1.00 points | 😵 Struggling, barely making ends meet |
+| New First Tier | 1.25 points | 😐 High pressure, can't save |
+| Second Tier | 1.42 points | 🙂 Okay, some pressure |
+| Third Tier | 1.67 points | 😊 Good, middle class lifestyle |
+| Fourth Tier | 2.00 points | 😍 Excellent, local middle class |
+| County | 2.33 points | 🚀 Extremely good, worry-free living |
+| Township | 2.66 points | 💎 Local tycoon, elite status |
 
 **Interpretation**:
 - Same salary yields significantly better quality of life in smaller cities

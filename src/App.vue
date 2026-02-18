@@ -31,7 +31,6 @@ import { NMessageProvider } from "naive-ui";
     flex: 1;
     flex-direction: column;
     display: flex;
-    padding: 16px;
     overflow-y: hidden;
   }
 }
