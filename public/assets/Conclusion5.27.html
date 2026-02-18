@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"APP","children":[{"content":"&#x6846;&#x67b6;","children":[{"content":"Vue2","children":[],"payload":{"tag":"h3","lines":"4,5"}},{"content":"Vant2","children":[{"content":"CountDown","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"PopOver","children":[],"payload":{"tag":"li","lines":"9,11"}}],"payload":{"tag":"h3","lines":"6,7"}},{"content":"<code>WebView</code>&#x5bb9;&#x5668; + &#x53cc;&#x5411;&#x7684;&#x6d88;&#x606f;&#x901a;&#x4fe1;","children":[],"payload":{"tag":"h3","lines":"11,12"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x4e1a;&#x52a1;","children":[{"content":"&#x7528;&#x6237;&#x8d2d;&#x4e70;&#x7684;&#x5c0f;&#x989d;&#x670d;&#x52a1;","children":[{"content":"&#x7eed;&#x8d39;&#x63d0;&#x793a;&#x6a2a;&#x5e45;","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"&#x672a;&#x8d2d;&#x4e70;&#x670d;&#x52a1;&#x7684;&#x4ea4;&#x4e92;&#x4f18;&#x5316;","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"DeepSeek &#x6807;&#x7b7e;","children":[],"payload":{"tag":"li","lines":"19,21"}}],"payload":{"tag":"h3","lines":"15,16"}},{"content":"&#x6d3b;&#x52a8;&#x9875;","children":[{"content":"&#x6d3b;&#x52a8; id","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"&#x6e20;&#x9053; id firstChannel secondChannel","children":[],"payload":{"tag":"li","lines":"24,26"}}],"payload":{"tag":"h3","lines":"21,22"}},{"content":"&#x8ba2;&#x5355;&#x5217;&#x8868;&#x548c;&#x8ba2;&#x5355;&#x8be6;&#x60c5;","children":[{"content":"&#x591a;&#x573a;&#x666f;&#x4e0b;&#x7eed;&#x8d39;&#x6309;&#x94ae;&#x4ea4;&#x4e92;&#x548c;&#x5c01;&#x88c5;","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"&#x5bf9;&#x64cd;&#x4f5c;&#x6309;&#x94ae;&#x5c55;&#x793a;&#x903b;&#x8f91;&#x8fdb;&#x884c;&#x91cd;&#x6784;","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"&#x5176;&#x4ed6;&#x9700;&#x6c42;&#x63d0;&#x51fa;&#x7684;&#xff0c;&#x6bd4;&#x5982;&#x6298;&#x53e0;&#x64cd;&#x4f5c;&#x6309;&#x94ae;&#x5230;&#x66f4;&#x591a;&#x7b49;&#x4f18;&#x5316;","children":[],"payload":{"tag":"li","lines":"30,32"}}],"payload":{"tag":"h3","lines":"26,27"}}],"payload":{"tag":"h2","lines":"13,14"}}],"payload":{"tag":"h1","lines":"0,1"}},{"content":"&#x5929;&#x79e4;&#x540e;&#x53f0;","children":[{"content":"&#x6846;&#x67b6;","children":[{"content":"&#x4e3b;&#x9879;&#x76ee;","children":[{"content":"libra-education-system-management","children":[],"payload":{"tag":"li","lines":"37,39"}}],"payload":{"tag":"li","lines":"36,39"}},{"content":"\n<p data-lines=\"39,40\">&#x5b50;&#x9879;&#x76ee;</p>","children":[{"content":"libra-jfzg","children":[],"payload":{"tag":"li","lines":"41,42"}},{"content":"libra-quantization","children":[],"payload":{"tag":"li","lines":"42,44"}}],"payload":{"tag":"li","lines":"39,44"}}],"payload":{"tag":"h2","lines":"34,35"}},{"content":"&#x4e1a;&#x52a1;","children":[{"content":"&#x8bfe;&#x7a0b;&#x914d;&#x7f6e;","children":[],"payload":{"tag":"li","lines":"46,47"}},{"content":"&#x89c4;&#x5219;&#x914d;&#x7f6e;","children":[],"payload":{"tag":"li","lines":"47,49"}}],"payload":{"tag":"h2","lines":"44,45"}}],"payload":{"tag":"h1","lines":"32,33"}},{"content":"&#x5f00;&#x53d1;&#x6280;&#x5de7;","children":[{"content":"element-ui","children":[{"content":"\n<p data-lines=\"53,54\">&#x5904;&#x7406;&#x7a7a;&#x7684;&#x7ec6;&#x8282;</p>","children":[],"payload":{"tag":"li","lines":"53,55"}},{"content":"\n<p data-lines=\"55,56\">libra-jfzg &quot;element-ui&quot;: &quot;2.13.2&quot;</p>","children":[{"content":"packages/input-number/src/input-number.vue","children":[],"payload":{"tag":"li","lines":"56,57"}},{"content":"<img src=\"https://img.picgo.net/2025/05/27/Snipaste_2025-05-27_11-21-2757625048b1d77a7f.jpg\" alt>","children":[],"payload":{"tag":"li","lines":"57,58"}}],"payload":{"tag":"li","lines":"55,58"}},{"content":"\n<p data-lines=\"58,59\">libra-quantization &quot;element-plus&quot;: &quot;^2.7.6&quot;</p>","children":[],"payload":{"tag":"li","lines":"58,60"}}],"payload":{"tag":"h2","lines":"51,52"}},{"content":"Git","children":[],"payload":{"tag":"h2","lines":"60,61"}},{"content":"Android &#x548c; iOS &#x6a21;&#x62df;&#x5668;&#x7684;&#x4f7f;&#x7528;","children":[],"payload":{"tag":"h2","lines":"62,63"}}],"payload":{"tag":"h1","lines":"49,50"}},{"content":"&#x81ea;&#x8eab;&#x95ee;&#x9898;","children":[{"content":"Git &#x6d41;&#x7a0b;&#x7684;&#x5dee;&#x5f02;","children":[],"payload":{"tag":"li","lines":"66,67"}},{"content":"H5&#x5168;&#x573a;&#x666f;&#x7684;&#x6d88;&#x8d39;&#x94fe;&#x8def;","children":[],"payload":{"tag":"li","lines":"67,68"}},{"content":"&#x79fb;&#x52a8;&#x7aef;&#x9002;&#x914d;","children":[],"payload":{"tag":"li","lines":"68,69"}},{"content":"Vant &#x7ec4;&#x4ef6;&#x5e93;","children":[],"payload":{"tag":"li","lines":"69,71"}}],"payload":{"tag":"h1","lines":"64,65"}},{"content":"&#x9879;&#x76ee;&#x9700;&#x8981;&#x4f18;&#x5316;&#x7684;&#x5730;&#x65b9;","children":[{"content":"\n<p data-lines=\"73,74\"><code>ts</code>&#x7684;&#x652f;&#x6301;</p>","children":[{"content":"Zod","children":[],"payload":{"tag":"li","lines":"75,76"}},{"content":"https://github.com/colinhacks/zod","children":[],"payload":{"tag":"li","lines":"76,78"}}],"payload":{"tag":"li","lines":"73,78"}},{"content":"\n<p data-lines=\"78,79\"><code>?.</code>&#x7684;&#x652f;&#x6301;</p>","children":[],"payload":{"tag":"li","lines":"78,80"}},{"content":"\n<p data-lines=\"80,81\">&#x9875;&#x9762;&#x7ec4;&#x4ef6;&#x5316;</p>","children":[],"payload":{"tag":"li","lines":"80,81"}}],"payload":{"tag":"h1","lines":"71,72"}}]},{})</script>
+</body>
+</html>

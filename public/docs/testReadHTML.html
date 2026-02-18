@@ -1,0 +1,134 @@
+<html>
+
+<head>
+  <style>
+    body {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <hr>
+  <p>title: 腾讯云Ubuntu服务器安装图形化界面
+    date: 2024-01-22 19:39:13
+    tags:</p>
+  <ul>
+    <li>Linux</li>
+    <li>Ubuntu
+      toc: true
+      categories:</li>
+    <li>[计算机网络, Linux]</li>
+    <li>[操作系统, Linux]</li>
+  </ul>
+  <hr>
+  <h2 id="-">登录腾讯云</h2>
+  <pre><code class="lang-bash">➜  ~ ssh ubuntu@www.cctv3.net
+The authenticity <span class="hljs-keyword">of</span> host <span class="hljs-symbol">'www</span>.cctv3.net (<span class="hljs-number">110.42</span>.<span class="hljs-number">253.75</span>)' can<span class="hljs-symbol">'t</span> be established.
+ED25519 key fingerprint <span class="hljs-keyword">is</span> SHA256:<span class="hljs-number">1</span>gTaZcgrHg5VDYmQSC+OwD7G/RNHv1HTuB/zYrOt2eM.
+This host key <span class="hljs-keyword">is</span> known by the following other names/addresses:
+    ~/.ssh/known_hosts:<span class="hljs-number">7</span>: <span class="hljs-number">110.42</span>.<span class="hljs-number">253.75</span>
+Are you sure you want <span class="hljs-keyword">to</span> continue connecting (yes/no/[fingerprint])? yes
+<span class="hljs-literal">Warning</span>: Permanently added <span class="hljs-symbol">'www</span>.cctv3.net' (ED25519) <span class="hljs-keyword">to</span> the list <span class="hljs-keyword">of</span> known hosts.
+ubuntu@www.cctv3.net<span class="hljs-symbol">'s</span> password:
+Welcome <span class="hljs-keyword">to</span> Ubuntu <span class="hljs-number">18.04</span>.<span class="hljs-number">4</span> LTS (GNU/Linux <span class="hljs-number">4.15</span>.<span class="hljs-number">0</span>-<span class="hljs-number">213</span>-<span class="hljs-keyword">generic</span> x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as <span class="hljs-keyword">of</span> Mon Jan <span class="hljs-number">22</span> <span class="hljs-number">19</span>:<span class="hljs-number">38</span>:<span class="hljs-number">33</span> CST <span class="hljs-number">2024</span>
+
+  System load:  <span class="hljs-number">0.0</span>               Processes:           <span class="hljs-number">105</span>
+  Usage <span class="hljs-keyword">of</span> /:   <span class="hljs-number">4.3</span>% <span class="hljs-keyword">of</span> <span class="hljs-number">98.31</span>GB   Users logged <span class="hljs-keyword">in</span>:     <span class="hljs-number">0</span>
+  Memory usage: <span class="hljs-number">6</span>%                IP address <span class="hljs-keyword">for</span> eth0: <span class="hljs-number">10.0</span>.<span class="hljs-number">4.9</span>
+  Swap usage:   <span class="hljs-number">0</span>%
+
+ * Strictly confined Kubernetes makes edge <span class="hljs-keyword">and</span> IoT secure. Learn how MicroK8s
+   just raised the bar <span class="hljs-keyword">for</span> easy, resilient <span class="hljs-keyword">and</span> secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Canonical Livepatch <span class="hljs-keyword">is</span> available <span class="hljs-keyword">for</span> installation.
+   - Reduce system reboots <span class="hljs-keyword">and</span> improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+<span class="hljs-keyword">New</span> <span class="hljs-keyword">release</span> '<span class="hljs-number">20.04</span>.<span class="hljs-number">6</span> LTS' available.
+Run <span class="hljs-symbol">'do</span>-<span class="hljs-keyword">release</span>-upgrade' <span class="hljs-keyword">to</span> upgrade <span class="hljs-keyword">to</span> it.
+
+
+Last login: Mon Jan <span class="hljs-number">22</span> <span class="hljs-number">11</span>:<span class="hljs-number">05</span>:<span class="hljs-number">47</span> <span class="hljs-number">2024</span> from <span class="hljs-number">58.60</span>.<span class="hljs-number">186.1</span>
+<span class="hljs-keyword">To</span> run a command as administrator (user <span class="hljs-string">"root"</span>), <span class="hljs-keyword">use</span> <span class="hljs-string">"sudo &lt;command&gt;"</span>.
+See <span class="hljs-string">"man sudo_root"</span> <span class="hljs-keyword">for</span> details.
+</code></pre>
+  <!-- more -->
+  <h2 id="sudo">Sudo</h2>
+  <pre><code class="lang-bash"><span class="hljs-attribute">sudo su root</span>
+</code></pre>
+  <h2 id="-">更新软件源</h2>
+  <pre><code class="lang-bash">root@VM<span class="hljs-number">-4</span><span class="hljs-number">-9</span>-ubuntu:<span class="hljs-meta-keyword">/home/</span>ubuntu<span class="hljs-meta"># apt-get update</span>
+<span class="hljs-symbol">Hit:</span><span class="hljs-number">1</span> http:<span class="hljs-comment">//mirrors.tencentyun.com/ubuntu bionic InRelease</span>
+<span class="hljs-symbol">Hit:</span><span class="hljs-number">2</span> http:<span class="hljs-comment">//mirrors.tencentyun.com/ubuntu bionic-security InRelease</span>
+<span class="hljs-symbol">Hit:</span><span class="hljs-number">3</span> http:<span class="hljs-comment">//mirrors.tencentyun.com/ubuntu bionic-updates InRelease</span>
+Reading package lists... Done
+root@VM<span class="hljs-number">-4</span><span class="hljs-number">-9</span>-ubuntu:<span class="hljs-meta-keyword">/home/</span>ubuntu<span class="hljs-meta">#</span>
+</code></pre>
+  <h2 id="-vnc-server">安装 VNC Server</h2>
+  <h3 id="-vnc4server">安装 VNC4Server</h3>
+  <pre><code class="lang-bash">apt-<span class="hljs-keyword">get</span> install vnc4server
+</code></pre>
+  <h3 id="-vnc">启动 VNC</h3>
+  <pre><code class="lang-bash"><span class="hljs-attribute">vncserver</span>
+</code></pre>
+  <blockquote>
+    <p>New &#39;VM-4-9-ubuntu:1 (root)&#39; desktop is VM-4-9-ubuntu:1</p>
+  </blockquote>
+  <p>说明启动成功。</p>
+  <h2 id="-gui-gnome">安装 GUI -&gt; Gnome</h2>
+  <p>GNOME 是一个自由开源的桌面环境，是 Linux 操作系统中最常用的桌面环境之一。GNOME 的目标是为 Linux
+    系统提供现代、易用的桌面环境，以提高用户的体验和生产力。它提供了一个用户友好的界面和许多常用的应用程序，如文件管理器、文本编辑器、终端、图形图像处理程序等。GNOME 还支持许多第三方应用程序，用户可以根据自己的需要自定义桌面环境。
+  </p>
+  <h3 id="-x-windows">安装 X-windows</h3>
+  <pre><code class="lang-bash">sudo apt-<span class="hljs-keyword">get</span> install x-<span class="hljs-built_in">window</span>-system-core
+</code></pre>
+  <h3 id="-">安装登录管理器</h3>
+  <pre><code class="lang-bash">sudo apt-<span class="hljs-keyword">get</span> install gdm3
+</code></pre>
+  <h3 id="-ubuntu-">安装 Ubuntu 界面</h3>
+  <pre><code class="lang-bash">sudo apt-<span class="hljs-keyword">get</span> install ubuntu-desktop
+</code></pre>
+  <h2 id="-">剩余工作</h2>
+  <h3 id="-gnome-">安装 Gnome 相关配套软件</h3>
+  <pre><code class="lang-bash">sudo apt-<span class="hljs-built_in">get</span> install gnome-panel gnome-settings-daemon metacity nautilus gnome-<span class="hljs-built_in">terminal</span>
+</code></pre>
+  <h3 id="-vnc-">修改 VNC 配置</h3>
+  <pre><code class="lang-bash">vi ~<span class="hljs-regexp">/.vnc/</span>xstartup
+</code></pre>
+  <p><img src="/assets/Snipaste_2024-01-22_19-57-04.jpg" alt=""></p>
+  <pre><code class="lang-bash"><span class="hljs-meta">#!/bin/sh</span>
+<span class="hljs-comment"># Uncomment the following two lines for normal desktop:</span>
+<span class="hljs-built_in">export</span> XKL_XMODMAP_DISABLE=1
+ <span class="hljs-built_in">unset</span> SESSION_MANAGER
+<span class="hljs-comment"># exec /etc/X11/xinit/xinitrc</span>
+<span class="hljs-built_in">unset</span> DBUS_SESSION_BUS_ADDRESS
+gnome-panel &amp;
+gnome-settings-daemon &amp;
+metacity &amp;
+nautilus &amp;
+gnome-terminal &amp;
+</code></pre>
+  <h3 id="-vnc">重启 VNC</h3>
+  <ul>
+    <li>杀掉原来进程。</li>
+  </ul>
+  <pre><code class="lang-bash">vncserver -<span class="hljs-keyword">kill</span> :<span class="hljs-number">1</span>
+</code></pre>
+  <ul>
+    <li>生成新的会话</li>
+  </ul>
+  <pre><code class="lang-bash"><span class="hljs-selector-tag">vncserver</span> <span class="hljs-selector-pseudo">:1</span>
+</code></pre>
+  <p>好了，经过以上步骤，就能用 VNC 客户端梳理连接啦 ...</p>
+  <p><img src="/assets/Snipaste_2024-01-22_19-59-26.jpg" alt=""></p>
+</body>
+
+</html>
