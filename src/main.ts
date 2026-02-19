@@ -21,6 +21,10 @@ initAMapApiLoader({
 
 import App from "./App.vue";
 import router from "./router";
+// 1. 引入你需要的组件
+import { Button, Collapse, CollapseItem, Tab, Tabs } from "vant";
+// 2. 引入组件样式
+import "vant/lib/index.css";
 
 const pinia = createPinia();
 
@@ -28,6 +32,10 @@ pinia.use(piniaPluginPersistedstate); // 注册持久化插件
 
 const app = createApp(App);
 
+const vantComponents = [Button, Collapse, CollapseItem, Tab, Tabs];
+vantComponents.forEach((component) => {
+  app.use(component);
+});
 app.use(pinia);
 app.use(VueQueryPlugin);
 app.use(router);

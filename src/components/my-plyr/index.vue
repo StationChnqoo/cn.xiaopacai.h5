@@ -1,5 +1,5 @@
 <template>
-  <div class="test-plyr">
+  <div class="my-plyr">
     <video ref="videoRef" controls crossorigin="anonymous" playsinline />
   </div>
 </template>
@@ -8,9 +8,11 @@
 import Hls from "hls.js";
 import Plyr from "plyr";
 import { onMounted, onUnmounted, ref, watch } from "vue";
-import { useRoute } from "vue-router";
 
-const route = useRoute();
+const props = defineProps<{
+  src?: string;
+}>();
+
 const videoRef = ref<HTMLVideoElement | null>(null);
 let player: Plyr | null = null;
 let hls: Hls | null = null;
@@ -44,19 +46,18 @@ onMounted(() => {
       speed: "播放速度",
     },
   });
-  const src = route.query.src as string | undefined;
-  if (src) {
-    currentSrc.value = src;
-    loadVideo(src);
+  if (props.src) {
+    currentSrc.value = props.src;
+    loadVideo(props.src);
   }
 });
 
 watch(
-  () => route.query.src,
+  () => props.src,
   (newSrc) => {
     if (newSrc && newSrc !== currentSrc.value) {
-      currentSrc.value = newSrc as string;
-      loadVideo(newSrc as string);
+      currentSrc.value = newSrc;
+      loadVideo(newSrc);
     }
   }
 );
@@ -102,7 +103,7 @@ const loadVideo = (src: string) => {
 </script>
 
 <style>
-.test-plyr {
+.my-plyr {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,13 +113,13 @@ const loadVideo = (src: string) => {
   overflow: hidden;
 }
 
-.test-plyr video {
+.my-plyr video {
   width: 100%;
   height: auto;
   background: black;
 }
 
-.test-plyr :deep(.plyr__control[data-plyr="play"]:hover) {
+.my-plyr :deep(.plyr__control[data-plyr="play"]:hover) {
   background: transparent !important;
   box-shadow: none !important;
 }
